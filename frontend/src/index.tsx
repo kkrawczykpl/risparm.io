@@ -1,12 +1,17 @@
 import reportWebVitals from './reportWebVitals';
+import { Router, View } from 'react-navi';
+import { routes } from './router';
 import ReactDOM from 'react-dom';
-import { App } from './App';
 import React from 'react';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router routes={routes}>
+      <React.Suspense fallback={null}>
+        <View />
+      </React.Suspense>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
