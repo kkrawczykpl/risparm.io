@@ -1,0 +1,12 @@
+@import '../../constants/variables.scss';
+
+.main-logo {
+  color: $accent;
+  cursor: pointer;
+
+  &.navbar-logo {
+    justify-self: start;
+    margin: 0;
+    margin-left: 20px;
+  }
+}

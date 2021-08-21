@@ -1,0 +1,96 @@
+@import '../../constants/variables.scss';
+
+.navbar {
+  background: $white;
+  height: $navbar-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include max-lg {
+    position: relative;
+  }
+}
+
+.menu-icon {
+  // Distance between hamburger menu bars
+  $bars-distance: -6px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  @include max-lg {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+  }
+
+  .close-icon {
+    &:before {
+      content: 'x'; // here is your X(cross) sign.
+      color: $accent;
+      font-size: 30px;
+      font-family: $text-font;
+      font-weight: 500;
+      transform: scale(2);
+    }
+  }
+
+  .hamburger-icon {
+    &,
+    &:before,
+    &:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 3px;
+      width: 20px;
+      background: $accent;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+
+    &:before {
+      top: $bars-distance;
+    }
+
+    &:after {
+      bottom: $bars-distance;
+    }
+  }
+}
+
+.navbar-links {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  margin: 0;
+  margin-right: 2rem;
+
+  @include max-lg {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+    position: absolute;
+    top: $navbar-height;
+    left: -100%;
+  }
+
+  &.active {
+    background: $white;
+    color: $black;
+    left: 0;
+    z-index: 1;
+    padding: 0;
+  }
+}

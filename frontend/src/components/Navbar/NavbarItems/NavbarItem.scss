@@ -1,0 +1,29 @@
+@import '../../../constants/variables.scss';
+
+.navbar-item {
+    color: $black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+
+    @include max-lg {
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        display: table;
+        color: $black;
+    }
+
+    &:hover {
+        background-color: $light-gray;
+        border-radius: 4px;
+
+        @include max-lg {
+            background-color: $accent;
+            color: #fff;
+        }
+    }
+
+    &, &:hover {
+        transition: all 0.2s ease-in-out;
+    }
+}

@@ -3,14 +3,12 @@ import { Router, View } from 'react-navi';
 import { routes } from './router';
 import ReactDOM from 'react-dom';
 import React from 'react';
-import './index.css';
+import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router routes={routes}>
-      <React.Suspense fallback={null}>
         <View />
-      </React.Suspense>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

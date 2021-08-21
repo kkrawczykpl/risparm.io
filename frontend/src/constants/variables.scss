@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Mandali&family=Mukta+Vaani:wght@200;300;400;500;700&display=swap');
+
+/* Colors */
+$white: #ffffff;
+$black: #000000;
+$light-gray: #fbfafb;
+$accent: #14e397;
+
+/* Typography */
+$main-font: 'Hind', sans-serif;
+$second-font: 'Mandali', sans-serif;
+$text-font: 'Mukta Vaani', sans-serif;
+
+/* Config */
+$navbar-height: 56px;
+
+
+/* Screen Size Definitions */
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+// Tablets and small desktops
+$screen-lg-max: 992px;
+// Large tablets and desktops
+$screen-xl-max: 1200px;
+
+// Large devices
+@mixin max-lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
