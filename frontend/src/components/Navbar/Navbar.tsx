@@ -24,8 +24,8 @@ export const Navbar: React.FC<NavbarProps> = ({ navbarItems }: NavbarProps) => {
       </div>
 
       <ul className={`navbar-links${isOpened ? ' active': ''}`}>
-        {navbarItems.map((item) => (
-          <NavbarItem title={item.title} path={item.path}></NavbarItem>
+        {navbarItems.map((item, index) => (
+          <NavbarItem title={item.title} path={item.path} key={index}></NavbarItem>
         ))}
       </ul>
     </nav>
