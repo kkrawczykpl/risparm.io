@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-navi';
 import { Paths } from '../../../router/paths';
 import './NavbarItem.scss';
 
@@ -17,13 +18,13 @@ export const NavbarItem: React.FC<NavbarItemProps> = ({
 }: NavbarItemProps) => {
   return (
     <li>
-      <a
+      <Link
         className={`navbar-item ${className ? className : ''}`}
         href={path}
         hidden={!!isHidden}
       >
         {title}
-      </a>
+      </Link>
     </li>
   );
 };

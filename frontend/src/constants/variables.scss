@@ -13,7 +13,8 @@ $text-font: 'Mukta Vaani', sans-serif;
 
 /* Config */
 $navbar-height: 56px;
-
+$sidebar-width: 260px;
+$sidebar-hidden-width: 78px;
 
 /* Screen Size Definitions */
 // Small tablets and large smartphones (landscape view)
@@ -38,3 +39,7 @@ $screen-xl-max: 1200px;
     @content;
   }
 }
+
+
+// Transitions
+$slow-all-transition: 0.4s all ease-in;

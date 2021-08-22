@@ -4,6 +4,7 @@ import { routes } from './router';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './index.scss';
+import 'boxicons/css/boxicons.min.css';
 import { isDevelopment } from './utils/environmentUtils';
 import { Layout } from './components/Layout/Layout';
 

@@ -6,10 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @include max-lg {
-    position: relative;
-  }
+  width: calc(100% - #{$sidebar-width});
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: $slow-all-transition;
 }
 
 .menu-icon {
@@ -83,7 +84,7 @@
     padding-bottom: 20px;
     position: absolute;
     top: $navbar-height;
-    left: -100%;
+    display: none;
   }
 
   &.active {
@@ -92,5 +93,6 @@
     left: 0;
     z-index: 1;
     padding: 0;
+    display: block;
   }
 }

@@ -38,7 +38,6 @@ git version 2.29.1
 * [Writen in TypeScript 4.3](https://www.typescriptlang.org/)
 * [Powered by NodeJS 14](https://nodejs.org/en/)
 * [React](https://reactjs.org/)
-* [Storeon](https://github.com/storeon/storeon)
 
 
 ## Usage
@@ -61,3 +60,7 @@ $ npm run start
 ```
 
 This will install, build application in development mode and run application
+
+## Dependencies
+
+* [Boxicons](https://boxicons.com/) - Icons
