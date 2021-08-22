@@ -1,7 +1,7 @@
 import { mount } from "navi";
 import { Paths } from "./paths";
-import HomePage from "../pages/Home";
+import { lazy } from "navi";
 
 export const routes = mount({
-    [Paths.START_PAGE]: HomePage,
+    [Paths.START_PAGE]: lazy(() => import('../pages/Home')),
 })

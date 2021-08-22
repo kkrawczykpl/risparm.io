@@ -5,11 +5,16 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import './index.scss';
 import { isDevelopment } from './utils/environmentUtils';
+import { Layout } from './components/Layout/Layout';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router routes={routes}>
-        <View />
+      <Layout>
+        <React.Suspense fallback={null}>
+          <View />
+        </React.Suspense>
+      </Layout>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
